@@ -5,8 +5,7 @@ class Transaction{
         productId, 
         lotId, 
         transactionQuantity, 
-        transactionDate, 
-        note
+        transactionDate
     ){
         this.id = id; 
         this.transactionType = transactionType;
@@ -14,6 +13,6 @@ class Transaction{
         this.lotId = lotId;
         this.transactionQuantity = transactionQuantity;
         this.transactionDate = transactionDate;
-        this.note = note;
+        this.note = null;
     }
 }

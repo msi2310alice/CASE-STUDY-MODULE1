@@ -1,9 +1,10 @@
 class Product{
-    constructor(id, itemCode, name, category, unit, minstock){
+    constructor(id, itemCode, name, category, unit){
         this.id = id;
         this.itemCode = itemCode;
         this.name = name;
         this.category = category;
-        this.minstock = minstock;
+        this.unit = unit;
+        this.minStock = null;
     }
 }
