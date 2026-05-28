@@ -10,6 +10,49 @@
     <h1>Quản lý kho trái cây</h1>
     <section>
         <h2>Bảng tồn kho</h2>
+        <form action="" id="editForm">
+            <fieldset>
+                <legend>Chỉnh sửa thông tin hàng hóa</legend>
+                <label for="editQuantity">Khối lượng: </label>
+                <input type="number" id="editQuantity" placeholder="Số lượng cần thay đổi">
+                <label for="editPrice">Giá:</label>
+                <input type="number" id="editPrice" placeholder="Giá cần thay đổi">
+                <label for="editDate">Ngày nhập:</label>
+                <input type="date" id="editDate">
+                <button type="button" onclick="updateInventory()">Cập nhật</button>
+            </fieldset>
+        </form>
+        <form action="" id="importForm">
+            <fieldset>
+                <legend>Nhập hàng</legend>
+                <input type="text" id="importItem" placeholder="Nhập Item">
+                <input type="text" id="importName" placeholder="Nhập tên sản phẩm">
+                <select name="category" id="importCategory">
+                    <option value="fruit">Trái cây</option>
+                    <option value="milk">Sữa</option>
+                    <option value="cake">Bánh</option>
+                </select>
+                <select name="unit" id="importUnit">
+                    <option value="kg">kg</option>
+                    <option value="cans">cans</option>
+                    <option value="pcs">pieces</option>
+                </select>
+                <input type="number" id="importQuantity" placeholder="Nhập số lượng">
+                <input type="number" id="importPrice" placeholder="Nhập giá">
+                <input type="text" id="importSupplierCode" placeholder="Nhập mã nhà cung cấp">
+                <input type="date" id="importDate">
+                <input type="date" id="expiryDate">
+                <button type="button" onclick="importInventory()">Nhập hàng</button>
+            </fieldset>
+        </form>
+        <form action="" id="exportForm">
+            <fieldset>
+                <legend>Xuất hàng</legend>
+                <p id="exportInfo"></p>
+                <input type="number" id="exportQuantity" placeholder="Nhập số lượng xuất">
+                <button type="button" onclick="exportInventory()">Xuất hàng</button>
+            </fieldset>
+        </form>
         <table id="">
             <thead>
                 <th>STT</th>
@@ -23,14 +66,15 @@
                 <th>Ngày nhập</th>
                 <th>Trạng thái</th>
                 <th colspan="2">Thao tác</th>
+                <th>Xuất hàng</th>
             </thead>
-            <tbody id="list"></tbody>
+            <tbody id="listInventory"></tbody>
         </table>
     </section>
 
     <section>
         <h2>Lịch sử giao dịch</h2>
-        <table id="">
+        <table >
             <thead>
                 <th>Mã giao dịch</th>
                 <th>Loại giao dịch</th>
@@ -43,9 +87,7 @@
                 <th>Lot</th>
                 <th>Ghi chú</th>
             </thead>
-            <tbody id="">
-
-            </tbody>
+            <tbody id="listTransaction"></tbody>
         </table>
     </section>
     
