@@ -20,8 +20,8 @@ transactions[1] = new Transaction("T002", "import", lots[1].id, 40, "2026-05-28"
 transactions[2] = new Transaction("T003", "import", lots[2].id, 25, "2026-05-28");
 transactions[3] = new Transaction("T004", "import", lots[3].id, 60,"2026-05-28");
 
-function saveData(key,data){
-    localStorage.setItem(key,JSON.stringify(data));
+function saveData(key,arrayData){
+    localStorage.setItem(key,JSON.stringify(arrayData));
 }
 function loadData(key){
     if (localStorage.getItem(key)!=null){
