@@ -53,6 +53,11 @@ function displayInventoryTable(arrayLots){
                 </tr>`;
     }
     tableInventory.innerHTML = text;
+    saveData(PRODUCT, products);
+    saveData(LOT, lots);
+    console.log(products);
+    console.log(lots); 
+    
 }
 
 function editInventory(index){
@@ -99,8 +104,6 @@ function importInventory(){
     displayInventoryTable(lots);
     console.log(products);
     console.log(lots); 
-    saveData(PRODUCT, products);
-    saveData(LOT, lots);
 }
 function editExportInventory(index){
     exportInfo.innerHTML = `Item: ${lots[index].productItemCode} <br>

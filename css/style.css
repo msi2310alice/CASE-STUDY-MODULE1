@@ -7,3 +7,6 @@ th, tr, td {
     border: 1px solid gray;
     border-collapse: collapse;
 }
+form {
+    margin-top: 20px;
+}
